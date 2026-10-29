@@ -2,4 +2,4 @@
 
 MOVIES=("pushpa" "devara" "rrr")
 
-echo "${print[1]}"
+echo "${MOVIES[1]}"
