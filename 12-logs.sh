@@ -25,7 +25,7 @@ VALIDATE(){
     fi
 } 
 
-dnf list installed mysql
+dnf list installed mysql &>>LOG_FILE_NAME
 if [ $? -ne 0 ]   #### NOT INSTALLED
 then
     dnf install mysql -y
@@ -36,7 +36,7 @@ else
 fi
 
 
-dnf list installed git
+dnf list installed git &>>LOG_FILE_NAME
 if [ $? -ne 0 ]   #### NOT INSTALLED
 then
     dnf install git -y
